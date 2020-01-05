@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .entity-response-value {
+            background: #2351ba;
+            color: #fff;
+            display: inline-block;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 2px 12px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Named Entities: </h3>
+    {% for x in list %}
+        <p>
+            {{ x['label'] }} : 
+            <span class="entity-response-value"> {{ x['word'] }} </span>
+        </p>
+    {% endfor %}
+</body>
+</html>
